@@ -42,5 +42,13 @@ $ ssh dokku@server domains:set <app> myawesomeapp.com www.myawesomeapp.com # Cli
 
 Note: The original domain set by dokku nginx-vhosts plugin is kept active.
 
+## Unit tests
+
+This plugin uses [assert.sh 1.0 - bash unit testing framework](http://github.com/lehmannro/assert.sh) and ships with relevant tests thanks to [wmluke](https://github.com/wmluke).
+
+To run the tests:
+
+    make test
+
 ## License
 MIT
