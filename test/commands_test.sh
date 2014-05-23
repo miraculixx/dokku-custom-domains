@@ -38,6 +38,7 @@ assert "cat test/fixtures/dokku/rad-app/nginx.conf" "$expected"
 # `domains` should read the set domains
 assert "$dokku domains rad-app" "radapp.com www.radapp.com"
 
+# test against an app configured with ssl
 assert "$dokku domains:set secure-app vault.it www.vault.it " "[stub: pluginhook nginx-pre-reload secure-app]\n[stub: sudo /etc/init.d/nginx reload]"
 expected=$(< "test/expected/secure-app-nginx.conf")
 assert "cat test/fixtures/dokku/secure-app/nginx.conf" "$expected"
@@ -51,3 +52,5 @@ echo "" > test/fixtures/dokku/rad-app/DOMAINS
 echo "" > test/fixtures/dokku/secure-app/DOMAINS
 rm "test/fixtures/dokku/rad-app/nginx.conf"
 rm "test/fixtures/dokku/secure-app/nginx.conf"
+
+exit 0

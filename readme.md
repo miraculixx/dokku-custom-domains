@@ -32,18 +32,11 @@ $ dokku help
 
 ### Add domains
 
-Create vhost with a second domain:
+Create vhost with a custom domain:
 
 ```bash
-$ dokku domains:set <app> myawesomeapp.com            # Server side
-$ ssh dokku@server domains:set <app> myawesomeapp.com # Client side
-```
-
-Create vhost with multiple additional domains:
-
-```bash
-$ dokku domains:set <app> myawesomeapp.com www.myawesomeapp.com anotherawesomedomain.com www.anotherawesomedomain.com            # Server side
-$ ssh dokku@server domains:set <app> myawesomeapp.com www.myawesomeapp.com anotherawesomedomain.com www.anotherawesomedomain.com # Client side
+$ dokku domains:set <app> myawesomeapp.com www.myawesomeapp.com            # Server side
+$ ssh dokku@server domains:set <app> myawesomeapp.com www.myawesomeapp.com # Client side
 ```
 
 Create vhost with a second sub-domain:
@@ -58,6 +51,13 @@ Create vhost with a wildcard domain:
 ```bash
 $ dokku domains:set <app> *.myawesomeapp.com            # Server side
 $ ssh dokku@server domains:set <app> *.myawesomeapp.com # Client side
+```
+
+Create vhost with multiple additional domains:
+
+```bash
+$ dokku domains:set <app> myawesomeapp.com www.myawesomeapp.com anotherawesomedomain.com www.anotherawesomedomain.com            # Server side
+$ ssh dokku@server domains:set <app> myawesomeapp.com www.myawesomeapp.com anotherawesomedomain.com www.anotherawesomedomain.com # Client side
 ```
 
 ### Remove domains
