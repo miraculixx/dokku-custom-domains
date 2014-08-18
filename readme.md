@@ -4,7 +4,7 @@
 
 ## Background
 
-If you add a [custom domain to your heroko app](https://devcenter.heroku.com/articles/custom-domains), you can count on the fact that it will work in the same manner as the `appname.herokuapp.com` domain. The purpose of this plugin is to bring this possibility to dokku users.
+If you add a [custom domain to your heroku app](https://devcenter.heroku.com/articles/custom-domains), you can count on the fact that it will work in the same manner as the `appname.herokuapp.com` domain. The purpose of this plugin is to bring this possibility to dokku users.
 
 ## What differentiates this plugin from other dokku domain-related plugins?
 
@@ -12,7 +12,7 @@ Unlike other domain-related plugins, this plugin will update the existing app ng
 
 ## How does it work?
 
-The plugin modified the nginx "server_name" directive to include all custom domains set by `domains:set`.
+The plugin modifies the nginx "server_name" directive to include all custom domains set by `domains:set`.
 
 ## Installation
 
