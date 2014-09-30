@@ -30,15 +30,15 @@ case "$1" in
     ;;
 
   domains:set)
-    if [[ -z "${*:3}" ]]; then
-      echo "Usage: dokku domains:set APP DOMAIN1 [DOMAIN2 ...]"
-      echo "Must specify a DOMAIN."
-      exit 1
-    fi
+      if [[ -z "${*:3}" ]]; then
+        echo "Usage: dokku domains:set APP DOMAIN1 [DOMAIN2 ...]"
+        echo "Must specify a DOMAIN."
+        exit 1
+      fi
 
-    domains="${*:3}"
+      domains="${*:3}"
 
-    echo "$domains" > $DOMAINS_FILE
+      echo "$domains" > $DOMAINS_FILE
 
       pluginhook nginx-pre-reload $APP
       sudo /etc/init.d/nginx reload
