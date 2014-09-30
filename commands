@@ -25,6 +25,16 @@ fi
 
 case "$1" in
 
+  url)
+      APP="$2";
+      if [[ -d "$DOKKU_ROOT/$APP" ]]; then
+        if [[ -f "$DOKKU_ROOT/$APP/nginx.conf" ]]; then
+          echo "=====> Current server_name configuration for app vhost:"
+          echo -n "     "; cat $DOKKU_ROOT/$APP/nginx.conf | grep "server_name"
+        fi
+      fi
+    ;;
+
   domains)
       cat $DOMAINS_FILE
     ;;
