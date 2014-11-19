@@ -14,6 +14,10 @@ Unlike other domain-related plugins, this plugin will update the existing app ng
 
 The plugin modifies the nginx "server_name" directive to include all custom domains set by `domains:set`.
 
+## Requirements
+
+Dokku >= 0.3.1
+
 ## Installation
 
 ```bash
